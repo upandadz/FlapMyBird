@@ -14,7 +14,7 @@ public class FlyBehavior : MonoBehaviour
 
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Input.GetMouseButtonDown(0))
         {
             rb2d.linearVelocity = Vector2.up * velocity;
             SFXManager.instance.PlaySFX(SFXManager.instance.audioClips[1]);
